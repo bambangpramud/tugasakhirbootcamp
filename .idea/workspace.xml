@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d6de7e6f-4d75-4ecc-9dc9-e8fbc5b0d3f7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/TaBootcampApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/configuration/ConfigProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/configuration/MainConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/core/Crypto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/core/SMTPCore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/handler/ApiError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/handler/ApiValidationError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/handler/FormatValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/handler/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/handler/ResponseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/model/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/model/Kunjungan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/repos/AccountRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/repos/KunjunganRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/services/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/services/KunjunganService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/utils/ConstantMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KAW5gmdg5bbjmJA4iuVR2KN2KQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/springboot project/tugasakhirbootcamp/src/main/resources",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\springboot project\tugasakhirbootcamp\src\main\resources" />
+      <recent name="C:\springboot project\tugasakhirbootcamp\src\main\java\com\bcafinance\repos" />
+      <recent name="C:\springboot project\tugasakhirbootcamp\src\main\java\com\bcafinance\services" />
+      <recent name="C:\springboot project\tugasakhirbootcamp\src\main\java\com\bcafinance\model" />
+      <recent name="C:\springboot project\tugasakhirbootcamp\src\main\java\com\bcafinance\handler" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bcafinance" />
+      <recent name="com.bcafinance.utils" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="TaBootcampApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tugasakhirbootcamp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bcafinance.TaBootcampApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d6de7e6f-4d75-4ecc-9dc9-e8fbc5b0d3f7" name="Changes" comment="" />
+      <created>1673417687237</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673417687237</updated>
+      <workItem from="1673417688639" duration="4452000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
