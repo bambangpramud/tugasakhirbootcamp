@@ -10,5 +10,40 @@ Version 1.0
 
 package com.bcafinance.services;
 
+import com.bcafinance.model.Account;
+import com.bcafinance.repos.AccountRepo;
+import com.bcafinance.utils.CsvReader;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
+
+@Service
+@Transactional
 public class AccountService {
+
+private AccountRepo accrepo;
+
+@Autowired
+public AccountService(AccountRepo accrepo){
+    this.accrepo=accrepo;
+}
+
+
+    @Transactional(rollbackFor = Exception.class)
+    public List<Account> saveBulkAccount(MultipartFile multipartFile) throws Exception
+    {
+        try{
+            List<Account> lsAccount = CsvReader.csvToAccountData(multipartFile.getInputStream());
+            return accrepo.saveAll(lsAccount);
+        }catch (Exception e)
+        {
+            throw new Exception(e.getMessage());
+        }
+    }
+
+
+
 }

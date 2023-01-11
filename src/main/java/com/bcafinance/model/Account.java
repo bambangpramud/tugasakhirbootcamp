@@ -57,6 +57,9 @@ public class Account {
     private String spouseName;
 
     @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
+    @Column(name = "KTPAddress", length = 225)
+    private String ktpAddress;
+    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
     @Column(name = "HomeAddress", length = 225)
     private String homeAddress;
 
@@ -241,5 +244,13 @@ public class Account {
 
     public void setActive(boolean active) {
         isActive = active;
+    }
+
+    public String getKtpAddress() {
+        return ktpAddress;
+    }
+
+    public void setKtpAddress(String ktpAddress) {
+        this.ktpAddress = ktpAddress;
     }
 }

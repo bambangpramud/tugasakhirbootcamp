@@ -27,6 +27,7 @@ public class Kunjungan {
     @Column(name = "KunjunganId")
     private Long id;
 
+
     @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
     @Column(name = "StatusKonsumen", length = 25)
     private String statusKonsumen;
