@@ -74,14 +74,6 @@ public class Account {
     private String phoneNumber2;
 
 
-    @ManyToMany
-    @JoinTable(
-            name = "AccountKunjungan",
-            joinColumns = @JoinColumn(name="AccountId",referencedColumnName = "AccountId"),
-            inverseJoinColumns = @JoinColumn(name = "KunjunganId",referencedColumnName = "KunjunganId")
-    )
-    private Set<Kunjungan> kunjungans = new HashSet<Kunjungan>();
-
 
     @Column(name = "CreatedBy",nullable = false)
     private String createdBy = "1";
@@ -198,13 +190,6 @@ public class Account {
         this.phoneNumber2 = phoneNumber2;
     }
 
-    public Set<Kunjungan> getKunjungans() {
-        return kunjungans;
-    }
-
-    public void setKunjungans(Set<Kunjungan> kunjungans) {
-        this.kunjungans = kunjungans;
-    }
 
     public String getCreatedBy() {
         return createdBy;

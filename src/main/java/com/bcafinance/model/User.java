@@ -36,26 +36,26 @@ public class User {
     @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
     @Column(name = "CollectName" , nullable = false, length = 60)
     private String collectName;
-//
-//    @Length(message = ConstantMessage.WARNING_COLLECT_NAME_MANDATORY)
-//    @NotEmpty(message = ConstantMessage.WARNING_COLLECT_NAME_MANDATORY)
-//    @Column(name = "Criteria" , nullable = false, length = 60)
-//    private String criteria;
+
+    @Length(message = ConstantMessage.WARNING_DATA_EMPTY)
+    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
+    @Column(name = "Type" , nullable = false, length = 60)
+    private String type;
+
+    @Length(message = ConstantMessage.WARNING_DATA_EMPTY)
+    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
+    @Column(name = "Title" , nullable = false, length = 60)
+    private String title;
+
+    @Length(message = ConstantMessage.WARNING_DATA_EMPTY)
+    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
+    @Column(name = "Password" , nullable = false, length = 60)
+    private String password;
 
     @Length(message = ConstantMessage.WARNING_DATA_EMPTY)
     @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
     @Column(name = "Coveran" , nullable = false, length = 60)
     private String coveran;
-
-    @Length(message = ConstantMessage.WARNING_DATA_EMPTY)
-    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
-    @Column(name = "Supervisor" , nullable = false, length = 60)
-    private String supervisor;
-
-    @Length(message = ConstantMessage.WARNING_DATA_EMPTY)
-    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
-    @Column(name = "Head" , nullable = false, length = 60)
-    private String head;
 
     @Length(message = ConstantMessage.WARNING_DATA_EMPTY)
     @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
@@ -94,12 +94,5 @@ public class User {
     @Column(name = "IsCMS",nullable = false)
     private boolean isCMS = true;
 
-    @ManyToMany
-    @JoinTable(
-            name = "UserKunjungan",
-            joinColumns = @JoinColumn(name="UserID",referencedColumnName = "UserID"),
-            inverseJoinColumns = @JoinColumn(name = "KunjunganID",referencedColumnName = "KunjunganID")
-    )
-    private Set<Kunjungan> kunjungans = new HashSet<Kunjungan>();
 
 }

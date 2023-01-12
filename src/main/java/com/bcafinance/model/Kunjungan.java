@@ -74,15 +74,16 @@ public class Kunjungan {
     @Column(name = "JamDiterima", length = 16, nullable = false, unique = true)
     private String jamDiterima;
 
+    @ManyToOne
+    @JoinColumn(name = "UserID")
+    private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "AccountId")
+    private Account account;
 
 
-    @ManyToMany(mappedBy = "kunjungans")
-    @JsonBackReference
-    private Set<Account> account = new HashSet<Account>();
 
-    @ManyToMany(mappedBy = "kunjungans")
-    @JsonBackReference
-    private Set<User> user = new HashSet<User>();
 
     //--------------------GETTER SETTER ------------------------------------//
 
@@ -199,11 +200,4 @@ public class Kunjungan {
         this.jamDiterima = jamDiterima;
     }
 
-    public Set<Account> getAccount() {
-        return account;
-    }
-
-    public void setAccount(Set<Account> seller) {
-        this.account = seller;
-    }
 }
