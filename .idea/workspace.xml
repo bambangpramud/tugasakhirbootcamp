@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6de7e6f-4d75-4ecc-9dc9-e8fbc5b0d3f7" name="Changes" comment="uhuy">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/controllers/AccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/controllers/KunjunganController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/utils/CsvReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/model/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/model/Kunjungan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/model/Kunjungan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/repos/AccountRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/repos/AccountRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/services/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/services/KunjunganService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/services/KunjunganService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +66,21 @@
       <recent name="com.bcafinance" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.TaBootcampApplication">
+    <configuration name="com.bcafinance.model in tugasakhirbootcamp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tugasakhirbootcamp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bcafinance.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bcafinance.model" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TaBootcampApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="tugasakhirbootcamp" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.bcafinance.TaBootcampApplication" />
@@ -78,6 +88,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.com.bcafinance.model in tugasakhirbootcamp" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -87,7 +102,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673417687237</updated>
-      <workItem from="1673417688639" duration="7366000" />
+      <workItem from="1673417688639" duration="12541000" />
     </task>
     <task id="LOCAL-00001" summary="uhuy">
       <created>1673423568608</created>
@@ -96,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673423568608</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="uhuy">
+      <created>1673426543175</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673426543175</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
