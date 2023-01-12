@@ -15,6 +15,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -74,6 +76,18 @@ public class Kunjungan {
     @Column(name = "JamDiterima", length = 16, nullable = false, unique = true)
     private String jamDiterima;
 
+
+    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
+    @Column(name = "PostalCode")
+    private Integer postalCode;
+
+    @NotNull(message = ConstantMessage.WARNING_DATA_EMPTY)
+//    @Column(name = "City",length = 50,nullable = false,unique = true)
+    @Column(name = "AgingDate")
+    private LocalDate agingDate;
+
+
+
     @ManyToOne
     @JoinColumn(name = "UserID")
     private User user;
@@ -81,8 +95,6 @@ public class Kunjungan {
     @ManyToOne
     @JoinColumn(name = "AccountId")
     private Account account;
-
-
 
 
     //--------------------GETTER SETTER ------------------------------------//
@@ -198,6 +210,31 @@ public class Kunjungan {
 
     public void setJamDiterima(String jamDiterima) {
         this.jamDiterima = jamDiterima;
+    }
+
+
+    public Integer getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(Integer postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
     }
 
 }

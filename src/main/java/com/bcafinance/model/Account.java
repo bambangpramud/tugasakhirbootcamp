@@ -67,13 +67,19 @@ public class Account {
     @Column(name = "MailAddress", length = 225)
     private String mailAddress;
 
+    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
+    @Column(name = "Coveran", length = 100)
+    private String coveran;
+
+    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
+    @Column(name = "PostalCode")
+    private Integer postalCode;
+
     @Column(name = "PhoneNumber1", length = 16, nullable = false, unique = true)
     private String phoneNumber1;
 
     @Column(name = "PhoneNumber2", length = 16, nullable = false, unique = true)
     private String phoneNumber2;
-
-
 
     @Column(name = "CreatedBy",nullable = false)
     private String createdBy = "1";
@@ -188,6 +194,23 @@ public class Account {
 
     public void setPhoneNumber2(String phoneNumber2) {
         this.phoneNumber2 = phoneNumber2;
+    }
+
+
+    public String getCoveran() {
+        return coveran;
+    }
+
+    public void setCoveran(String coveran) {
+        this.coveran = coveran;
+    }
+
+    public Integer getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(Integer postalCode) {
+        this.postalCode = postalCode;
     }
 
 

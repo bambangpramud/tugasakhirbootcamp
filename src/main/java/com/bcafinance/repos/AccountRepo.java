@@ -9,5 +9,19 @@ import java.util.List;
 public interface AccountRepo extends JpaRepository<Account,Long> {
 
 
-    List<Account> searchAccountByIsPriority( boolean priority);
+    List<Account> searchAccountsByIsPriority( boolean priority);
+
+    List<Account> searchAccountsByCoveran(String coveran);
+
+    Account getAccountByAccountNumber(String accountNumber);
+
+
+
+
+
+
+
+
+
+
 }
