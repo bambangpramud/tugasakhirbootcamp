@@ -81,12 +81,6 @@ public class Account {
     @Column(name = "PhoneNumber2", length = 16, nullable = false, unique = true)
     private String phoneNumber2;
 
-
-
-
-
-
-
     @Column(name = "CreatedBy",nullable = false)
     private String createdBy = "1";
 
@@ -202,6 +196,7 @@ public class Account {
         this.phoneNumber2 = phoneNumber2;
     }
 
+
     public String getCoveran() {
         return coveran;
     }
@@ -217,6 +212,7 @@ public class Account {
     public void setPostalCode(Integer postalCode) {
         this.postalCode = postalCode;
     }
+
 
     public String getCreatedBy() {
         return createdBy;

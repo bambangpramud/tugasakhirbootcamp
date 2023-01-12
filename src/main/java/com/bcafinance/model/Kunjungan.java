@@ -76,6 +76,7 @@ public class Kunjungan {
     @Column(name = "JamDiterima", length = 16, nullable = false, unique = true)
     private String jamDiterima;
 
+
     @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
     @Column(name = "PostalCode")
     private Integer postalCode;
@@ -94,6 +95,7 @@ public class Kunjungan {
     @ManyToOne
     @JoinColumn(name = "AccountId")
     private Account account;
+
 
     //--------------------GETTER SETTER ------------------------------------//
 
@@ -210,6 +212,7 @@ public class Kunjungan {
         this.jamDiterima = jamDiterima;
     }
 
+
     public Integer getPostalCode() {
         return postalCode;
     }
@@ -233,4 +236,5 @@ public class Kunjungan {
     public void setAccount(Account account) {
         this.account = account;
     }
+
 }
