@@ -94,12 +94,131 @@ public class User {
     @Column(name = "IsCMS",nullable = false)
     private boolean isCMS = true;
 
-    @ManyToMany
-    @JoinTable(
-            name = "UserKunjungan",
-            joinColumns = @JoinColumn(name="UserID",referencedColumnName = "UserID"),
-            inverseJoinColumns = @JoinColumn(name = "KunjunganID",referencedColumnName = "KunjunganID")
-    )
-    private Set<Kunjungan> kunjungans = new HashSet<Kunjungan>();
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getUniqId() {
+        return uniqId;
+    }
+
+    public void setUniqId(String uniqId) {
+        this.uniqId = uniqId;
+    }
+
+    public String getCollectName() {
+        return collectName;
+    }
+
+    public void setCollectName(String collectName) {
+        this.collectName = collectName;
+    }
+
+    public String getCoveran() {
+        return coveran;
+    }
+
+    public void setCoveran(String coveran) {
+        this.coveran = coveran;
+    }
+
+    public String getSupervisor() {
+        return supervisor;
+    }
+
+    public void setSupervisor(String supervisor) {
+        this.supervisor = supervisor;
+    }
+
+    public String getHead() {
+        return head;
+    }
+
+    public void setHead(String head) {
+        this.head = head;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getMsisdn() {
+        return msisdn;
+    }
+
+    public void setMsisdn(String msisdn) {
+        this.msisdn = msisdn;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public String getModifiedBy() {
+        return modifiedBy;
+    }
+
+    public void setModifiedBy(String modifiedBy) {
+        this.modifiedBy = modifiedBy;
+    }
+
+    public Date getModifiedDate() {
+        return modifiedDate;
+    }
+
+    public void setModifiedDate(Date modifiedDate) {
+        this.modifiedDate = modifiedDate;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    public boolean isMobile() {
+        return isMobile;
+    }
+
+    public void setMobile(boolean mobile) {
+        isMobile = mobile;
+    }
+
+    public boolean isCMS() {
+        return isCMS;
+    }
+
+    public void setCMS(boolean CMS) {
+        isCMS = CMS;
+    }
 }
