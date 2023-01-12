@@ -80,6 +80,10 @@ public class Kunjungan {
     @JsonBackReference
     private Set<Account> account = new HashSet<Account>();
 
+    @ManyToMany(mappedBy = "kunjungans")
+    @JsonBackReference
+    private Set<User> user = new HashSet<User>();
+
     //--------------------GETTER SETTER ------------------------------------//
 
 
