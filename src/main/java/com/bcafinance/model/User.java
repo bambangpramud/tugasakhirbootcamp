@@ -95,4 +95,6 @@ public class User {
     private boolean isCMS = true;
 
 
+
 }
+
