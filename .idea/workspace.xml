@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
-    <list default="true" id="d6de7e6f-4d75-4ecc-9dc9-e8fbc5b0d3f7" name="Changes" comment="uhuy">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/dto/OrderAccountDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/dto/ReportKunjunganDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/model/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/model/Kunjungan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/model/Kunjungan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/repos/AccountRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/repos/AccountRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/repos/KunjunganRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/repos/KunjunganRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/services/AccountService.java" afterDir="false" />
-    </list>
+    <list default="true" id="d6de7e6f-4d75-4ecc-9dc9-e8fbc5b0d3f7" name="Changes" comment="uhuy" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +41,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "F:/trainee/Bootcamp/Java/Day 18/AHS",
+    "last_opened_file_path": "F:/trainee/Bootcamp/Project/updated/tugasakhirbootcamp",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -73,7 +62,20 @@
       <recent name="com.bcafinance" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.TaBootcampApplication">
+  <component name="RunManager" selected="Application.TaBootcampApplication">
+    <configuration name="TaBootcampApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bcafinance.TaBootcampApplication" />
+      <module name="tugasakhirbootcamp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bcafinance.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="com.bcafinance.model in tugasakhirbootcamp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tugasakhirbootcamp" />
       <extension name="coverage">
@@ -97,7 +99,7 @@
     </configuration>
     <recent_temporary>
       <list>
-
+        <item itemvalue="Application.TaBootcampApplication" />
         <item itemvalue="JUnit.com.bcafinance.model in tugasakhirbootcamp" />
       </list>
     </recent_temporary>
