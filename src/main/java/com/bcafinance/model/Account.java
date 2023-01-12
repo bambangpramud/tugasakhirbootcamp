@@ -67,6 +67,14 @@ public class Account {
     @Column(name = "MailAddress", length = 225)
     private String mailAddress;
 
+    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
+    @Column(name = "Coveran", length = 100)
+    private String coveran;
+
+    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
+    @Column(name = "PostalCode")
+    private Integer postalCode;
+
     @Column(name = "PhoneNumber1", length = 16, nullable = false, unique = true)
     private String phoneNumber1;
 
@@ -74,13 +82,9 @@ public class Account {
     private String phoneNumber2;
 
 
-    @ManyToMany
-    @JoinTable(
-            name = "AccountKunjungan",
-            joinColumns = @JoinColumn(name="AccountId",referencedColumnName = "AccountId"),
-            inverseJoinColumns = @JoinColumn(name = "KunjunganId",referencedColumnName = "KunjunganId")
-    )
-    private Set<Kunjungan> kunjungans = new HashSet<Kunjungan>();
+
+
+
 
 
     @Column(name = "CreatedBy",nullable = false)
@@ -198,12 +202,20 @@ public class Account {
         this.phoneNumber2 = phoneNumber2;
     }
 
-    public Set<Kunjungan> getKunjungans() {
-        return kunjungans;
+    public String getCoveran() {
+        return coveran;
     }
 
-    public void setKunjungans(Set<Kunjungan> kunjungans) {
-        this.kunjungans = kunjungans;
+    public void setCoveran(String coveran) {
+        this.coveran = coveran;
+    }
+
+    public Integer getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(Integer postalCode) {
+        this.postalCode = postalCode;
     }
 
     public String getCreatedBy() {
