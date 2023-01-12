@@ -102,4 +102,6 @@ public class User {
     )
     private Set<Kunjungan> kunjungans = new HashSet<Kunjungan>();
 
+
 }
+
