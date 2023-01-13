@@ -9,7 +9,24 @@ Version 1.0
 */
 
 import com.bcafinance.model.Kunjungan;
+import com.bcafinance.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
-public interface UserRepo extends JpaRepository<Kunjungan,Long> {
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
+
+public interface UserRepo extends JpaRepository<User,Long> {
+
+    Optional<User> findByUniqId(String uniqId);
+    Optional<User> findByMsisdn(String phone);
+    Optional<User> findByPhoneNumber(String phone);
+
+    @Query(value = "SELECT * FROM users WHERE IsActive = 'true'",
+            nativeQuery = true)
+    @Modifying
+    List<User> getUserActive();
 }

@@ -78,4 +78,22 @@ public class ConstantMessage {
     public final static String VAR2_NULL = "VAR2 TIDAK BOLEH NULL";
 
     public final static String VAR3_NULL = "VAR3 TIDAK BOLEH NULL";
+
+    public final static String WARNING_REQUIRED = "FIELD HARUS DIISI";
+
+    public final static String WARNING_LENGHT = "PANJANG TIDAK SESUAI";
+
+    public final static String WARNING_USER_NOT_FOUND = "USER TIDAK DITEMUKAN";
+
+    public final static String WARNING_LOGIN_FAIL = "LOGIN GAGAL, USERNAME ATAU PASSWORD SALAH";
+
+    public final static String SUCCESS_LOGIN = "BERHASIL LOGIN";
+
+    public final static String WARNING_UNIQ_ID_UNIQ = "UNIQ ID HARUS UNIQ";
+    public final static String WARNING_PHONE_NUMBER_UNIQ = "PHONE NUMBER HARUS UNIQ";
+    public final static String WARNING_MSISDN_UNIQ = "MSISDN HARUS UNIQ";
+
+
+
+
 }
