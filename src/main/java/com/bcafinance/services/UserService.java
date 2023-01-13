@@ -45,11 +45,6 @@ public class UserService {
         {
             throw new ResourceNotFoundException(ConstantMessage.WARNING_PHONE_NUMBER_UNIQ);
         }
-        Optional<User> cBeanOptional3 = userRepo.findByMsisdn(user.getMsisdn());
-        if(cBeanOptional3.isPresent())//it means if exists
-        {
-            throw new ResourceNotFoundException(ConstantMessage.WARNING_MSISDN_UNIQ);
-        }
         userRepo.save(user);
     }
 

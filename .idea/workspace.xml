@@ -11,6 +11,9 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/repos/UserRepo.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/utils/ReadTextFileSB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/repos/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/repos/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/TaBootcampApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/TaBootcampApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/controllers/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/controllers/AccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/controllers/KunjunganController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/controllers/KunjunganController.java" afterDir="false" />
