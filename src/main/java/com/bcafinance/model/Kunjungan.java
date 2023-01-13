@@ -77,7 +77,9 @@ public class Kunjungan {
     @Column(name = "JamDiterima", length = 16, nullable = false)
     private String jamDiterima;
 
+
     @NotNull(message = ConstantMessage.WARNING_DATA_EMPTY)
+
     @Column(name = "PostalCode")
     private Integer postalCode;
 
@@ -100,6 +102,7 @@ public class Kunjungan {
     @JoinColumn(name = "AccountId")
     private Account account;
 
+
     @Column(name = "CreatedBy",nullable = false)
     private String createdBy = "1";
 
@@ -114,6 +117,7 @@ public class Kunjungan {
 
     @Column(name = "IsActive",nullable = false)
     private boolean isActive = true;
+
 
     //--------------------GETTER SETTER ------------------------------------//
 
@@ -230,6 +234,7 @@ public class Kunjungan {
         this.jamDiterima = jamDiterima;
     }
 
+
     public Integer getPostalCode() {
         return postalCode;
     }
@@ -253,6 +258,7 @@ public class Kunjungan {
     public void setAccount(Account account) {
         this.account = account;
     }
+
 
     public LocalDate getAgingDate() {
         return agingDate;
@@ -309,4 +315,5 @@ public class Kunjungan {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
 }

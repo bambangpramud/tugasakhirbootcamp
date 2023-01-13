@@ -84,9 +84,11 @@ public class Account {
     private String phoneNumber2;
 
 
+
 //    @Column(name = "City",length = 50,nullable = false,unique = true)
     @Column(name = "AgingDate")
     private LocalDate agingDate;
+
 
 
 
@@ -210,6 +212,7 @@ public class Account {
         this.phoneNumber2 = phoneNumber2;
     }
 
+
     public String getCoveran() {
         return coveran;
     }
@@ -225,6 +228,7 @@ public class Account {
     public void setPostalCode(Integer postalCode) {
         this.postalCode = postalCode;
     }
+
 
     public String getCreatedBy() {
         return createdBy;

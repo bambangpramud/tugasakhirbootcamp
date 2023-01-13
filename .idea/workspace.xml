@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="d6de7e6f-4d75-4ecc-9dc9-e8fbc5b0d3f7" name="Changes" comment="uhuy">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/dto/InputKunjunganDTO.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/dto/ReportAccountDTO.java" afterDir="false" />
@@ -43,7 +44,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2KAW5gmdg5bbjmJA4iuVR2KN2KQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -57,11 +60,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/springboot project/tugasakhirbootcamp/src/main/resources",
+    "last_opened_file_path": "F:/trainee/Bootcamp/Java/Day 18/AHS",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -101,6 +105,7 @@
     </configuration>
     <recent_temporary>
       <list>
+
         <item itemvalue="JUnit.com.bcafinance.model in tugasakhirbootcamp" />
       </list>
     </recent_temporary>
