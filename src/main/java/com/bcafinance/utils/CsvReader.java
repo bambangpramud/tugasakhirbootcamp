@@ -19,7 +19,9 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class CsvReader {
@@ -51,13 +53,22 @@ public class CsvReader {
                 account.setName(record.get("name"));
                 account.setType(record.get("type"));
                 account.setStatusKunjungan(record.get("statusKunjungan"));
-                account.setPriority( Boolean.parseBoolean(record.get("name")));
+                account.setPriority( Boolean.parseBoolean(record.get("isPriority")));
                 account.setCustomer(record.get("customer"));
                 account.setSpouseName(record.get("spouseName"));
                 account.setHomeAddress(record.get("homeAddress"));
+                account.setKtpAddress(record.get("ktpAddress"));
                 account.setMailAddress(record.get("mailAddress"));
+                account.setCoveran(record.get("coveran"));
+                account.setPostalCode(Integer.valueOf(record.get("postalCode")));
                 account.setPhoneNumber1(record.get("phoneNumber1"));
                 account.setPhoneNumber2(record.get("phoneNumber2"));
+                account.setAgingDate(LocalDate.parse(record.get("agingDate")));
+                account.setCreatedBy(record.get("createdBy"));
+                account.setCreatedDate(new Date() );
+
+
+
                 lsCitizens.add(account);
             }
 

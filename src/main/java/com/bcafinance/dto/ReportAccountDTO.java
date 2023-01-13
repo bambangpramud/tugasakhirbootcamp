@@ -2,27 +2,33 @@
 @Author Bambang a.k.a. Bambang
 calon menantu idaman
 created with Eclipse intellij 2022.2.3
-Created on 1/12/2023  9:31 AM
-Last Modified on 1/12/20239:31 AM
+Created on 1/13/2023  10:43 AM
+Last Modified on 1/13/202310:43 AM
 Version 1.0
 */
 
 
 package com.bcafinance.dto;
 
-public class OrderAccountDTO {
+import java.time.LocalDate;
+
+public class ReportAccountDTO {
 
     private Long id;
 
     private String accountNumber;
 
+    private String homeAddress;
+
     private String name;
 
-    private String type;
+    private LocalDate agingDate;
 
     private boolean isPriority;
 
     private String coveran;
+
+    private Integer postalCode;
 
     public Long getId() {
         return id;
@@ -40,6 +46,14 @@ public class OrderAccountDTO {
         this.accountNumber = accountNumber;
     }
 
+    public String getHomeAddress() {
+        return homeAddress;
+    }
+
+    public void setHomeAddress(String homeAddress) {
+        this.homeAddress = homeAddress;
+    }
+
     public String getName() {
         return name;
     }
@@ -48,12 +62,12 @@ public class OrderAccountDTO {
         this.name = name;
     }
 
-    public String getType() {
-        return type;
+    public LocalDate getAgingDate() {
+        return agingDate;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setAgingDate(LocalDate agingDate) {
+        this.agingDate = agingDate;
     }
 
     public boolean isPriority() {
@@ -70,5 +84,13 @@ public class OrderAccountDTO {
 
     public void setCoveran(String coveran) {
         this.coveran = coveran;
+    }
+
+    public Integer getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(Integer postalCode) {
+        this.postalCode = postalCode;
     }
 }
