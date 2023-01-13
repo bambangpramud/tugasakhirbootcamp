@@ -14,6 +14,8 @@ import com.bcafinance.utils.ConstantMessage;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -44,7 +46,7 @@ public class Account {
     @Column(name = "StatusKunjungan", length = 25)
     private String statusKunjungan;
 
-    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
+
     @Column(name = "IsPriority")
     private boolean isPriority;
 
@@ -71,7 +73,7 @@ public class Account {
     @Column(name = "Coveran", length = 100)
     private String coveran;
 
-    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
+    @NotNull(message = ConstantMessage.WARNING_DATA_EMPTY)
     @Column(name = "PostalCode")
     private Integer postalCode;
 
@@ -80,6 +82,20 @@ public class Account {
 
     @Column(name = "PhoneNumber2", length = 16, nullable = false, unique = true)
     private String phoneNumber2;
+
+
+
+//    @Column(name = "City",length = 50,nullable = false,unique = true)
+    @Column(name = "AgingDate")
+    private LocalDate agingDate;
+
+
+
+
+
+
+
+
 
     @Column(name = "CreatedBy",nullable = false)
     private String createdBy = "1";
@@ -261,4 +277,17 @@ public class Account {
     public void setKtpAddress(String ktpAddress) {
         this.ktpAddress = ktpAddress;
     }
+
+    public Account() {
+    }
+
+    public LocalDate getAgingDate() {
+        return agingDate;
+    }
+
+    public void setAgingDate(LocalDate agingDate) {
+        this.agingDate = agingDate;
+    }
+
+
 }
