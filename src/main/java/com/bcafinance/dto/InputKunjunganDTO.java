@@ -1,130 +1,81 @@
 /*
-@Author bambang a.k.a. Bambang
+@Author Bambang a.k.a. Bambang
 calon menantu idaman
 created with Eclipse intellij 2022.2.3
-Created on 1/11/2023  10:31 AM
-Last Modified on 1/11/202310:31 AM
+Created on 1/13/2023  3:55 PM
+Last Modified on 1/13/20233:55 PM
 Version 1.0
 */
 
 
-package com.bcafinance.model;
+package com.bcafinance.dto;
 
+import com.bcafinance.model.Account;
+import com.bcafinance.model.User;
 import com.bcafinance.utils.ConstantMessage;
-import com.fasterxml.jackson.annotation.JsonBackReference;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
-@Entity
-@Table(name = "Kunjungan")
-public class Kunjungan {
+public class InputKunjunganDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "KunjunganId")
-    private Long id;
-
-
-    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
-    @Column(name = "StatusKonsumen", length = 25)
     private String statusKonsumen;
 
-    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
-    @Column(name = "StatusUnit", length = 25)
+
     private String statusUnit;
 
-    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
-    @Column(name = "StatusAlamat", length = 25)
     private String statusAlamat;
 
-    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
-    @Column(name = "BertemuDengan", length = 50)
     private String bertemuDengan;
 
-    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
-    @Column(name = "HasilKunjungan", length = 50)
     private String hasilKunjungan;
 
-    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
-    @Column(name = "MailAddress", length = 225)
+
     private String mailAddress;
 
-    @Column(name = "PhoneNumber1", length = 16, nullable = false)
     private String phoneNumber1;
 
-    @Column(name = "PhoneNumber2", length = 16, nullable = false)
     private String phoneNumber2;
 
-    @Column(name = "FotoRumah", length = 225, nullable = false, unique = true)
     private String fotoRumah;
 
-    @Column(name = "FotoKTP", length = 225, nullable = false, unique = true)
     private String fotoKtp;
 
-
-    @Column(name = "IsSpt")
     private boolean isSpt;
 
-    @Column(name = "DiterimaOleh", length = 50, nullable = false)
     private String diterimaOleh;
 
-    @Column(name = "JamDiterima", length = 16, nullable = false)
     private String jamDiterima;
 
-    @NotNull(message = ConstantMessage.WARNING_DATA_EMPTY)
-    @Column(name = "PostalCode")
     private Integer postalCode;
 
-    @NotNull(message = ConstantMessage.WARNING_DATA_EMPTY)
-//    @Column(name = "City",length = 50,nullable = false,unique = true)
-    @Column(name = "AgingDate")
-    private LocalDate agingDate;
+    private String agingDate;
 
-    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
-    @Column(name = "Remark",length = 225)
     private String remark;
 
 
 
-    @ManyToOne
-    @JoinColumn(name = "UserID")
-    private User user;
+    private Long userId;
 
-    @ManyToOne
-    @JoinColumn(name = "AccountId")
-    private Account account;
 
-    @Column(name = "CreatedBy",nullable = false)
+    private Long accountId;
+
     private String createdBy = "1";
 
-    @Column(name = "CreatedDate",nullable = false)
+
     private Date createdDate = new Date();//JANGAN GUNAKAN columnDefinition untuk set default kolom, langsung set di variabel nya saja.
 
-    @Column(name = "ModifiedBy",nullable = true)
+
     private String modifiedBy ;
 
-    @Column(name = "ModifiedDate",nullable = true)
     private Date modifiedDate;
 
-    @Column(name = "IsActive",nullable = false)
     private boolean isActive = true;
-
-    //--------------------GETTER SETTER ------------------------------------//
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getStatusKonsumen() {
         return statusKonsumen;
@@ -238,28 +189,36 @@ public class Kunjungan {
         this.postalCode = postalCode;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Account getAccount() {
-        return account;
-    }
-
-    public void setAccount(Account account) {
-        this.account = account;
-    }
-
-    public LocalDate getAgingDate() {
+    public String getAgingDate() {
         return agingDate;
     }
 
-    public void setAgingDate(LocalDate agingDate) {
+    public void setAgingDate(String agingDate) {
         this.agingDate = agingDate;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public Long getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(Long accountId) {
+        this.accountId = accountId;
     }
 
     public String getCreatedBy() {
@@ -300,13 +259,5 @@ public class Kunjungan {
 
     public void setActive(boolean active) {
         isActive = active;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
     }
 }
