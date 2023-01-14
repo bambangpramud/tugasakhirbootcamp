@@ -91,7 +91,9 @@ public class ConstantMessage {
 
     public final static String WARNING_UNIQ_ID_UNIQ = "UNIQ ID HARUS UNIQ";
     public final static String WARNING_PHONE_NUMBER_UNIQ = "PHONE NUMBER HARUS UNIQ";
-    public final static String WARNING_MSISDN_UNIQ = "MSISDN HARUS UNIQ";
+    public final static String WARNING_CMS_REQUIRED = "FIELD CMS HARUS DIISI";
+    public final static String WARNING_MOBILE_REQUIRED = "FIELD MOBILE HARUS DIISI";
+
 
 
 

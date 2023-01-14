@@ -16,14 +16,6 @@ import javax.validation.constraints.NotEmpty;
 
 public class UserDTO {
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     private Long id;
     @Length(message = ConstantMessage.WARNING_REQUIRED)
     @NotEmpty(message = ConstantMessage.WARNING_LENGHT)
@@ -61,19 +53,17 @@ public class UserDTO {
     @NotEmpty(message = ConstantMessage.WARNING_LENGHT)
     private String remark;
 
-    public boolean isActivated() {
-        return isActivated;
+    private Boolean isActivated ;
+
+    private Boolean isMobile;
+
+    public Long getId() {
+        return id;
     }
 
-    public void setActivated(boolean activated) {
-        isActivated = activated;
+    public void setId(Long id) {
+        this.id = id;
     }
-
-    private boolean isActivated ;
-
-    private boolean isMobile;
-
-    private boolean isCMS;
 
     public String getUniqId() {
         return uniqId;
@@ -147,22 +137,31 @@ public class UserDTO {
         this.remark = remark;
     }
 
-    public boolean isMobile() {
+    public Boolean getActivated() {
+        return isActivated;
+    }
+
+    public void setActivated(Boolean activated) {
+        isActivated = activated;
+    }
+
+    public Boolean getMobile() {
         return isMobile;
     }
 
-    public void setMobile(boolean mobile) {
+    public void setMobile(Boolean mobile) {
         isMobile = mobile;
     }
 
-    public boolean isCMS() {
+    public Boolean getCMS() {
         return isCMS;
     }
 
-    public void setCMS(boolean CMS) {
+    public void setCMS(Boolean CMS) {
         isCMS = CMS;
     }
 
+    private Boolean isCMS;
 
 
 }

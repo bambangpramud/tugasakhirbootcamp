@@ -87,26 +87,14 @@ public class User implements Serializable {
     @Column(name = "ModifiedDate",nullable = true)
     private Date modifiedDate;
 
-    @Column(name = "IsActive",nullable = false)
-    private boolean isActive = true;
+    @Column(name = "IsActive",nullable = true)
+    private Boolean isActive;
 
+    @Column(name = "IsActivated",nullable = true)
+    private Boolean isActivated;
 
-    public boolean isActivated() {
-        return isActivated;
-    }
-
-    public void setActivated(boolean activated) {
-        isActivated = activated;
-    }
-
-    @Column(name = "IsActivated",nullable = false)
-    private boolean isActivated = false;
-
-    @Column(name = "IsMobile",nullable = false)
-    private boolean isMobile = false;
-
-    @Column(name = "IsCMS",nullable = false)
-    private boolean isCMS = true;
+    @Column(name = "IsMobile",nullable = true)
+    private Boolean isMobile;
 
     public Long getId() {
         return id;
@@ -220,29 +208,41 @@ public class User implements Serializable {
         this.modifiedDate = modifiedDate;
     }
 
-    public boolean isActive() {
+    public Boolean getActive() {
         return isActive;
     }
 
-    public void setActive(boolean active) {
+    public void setActive(Boolean active) {
         isActive = active;
     }
 
-    public boolean isMobile() {
+    public Boolean getActivated() {
+        return isActivated;
+    }
+
+    public void setActivated(Boolean activated) {
+        isActivated = activated;
+    }
+
+    public Boolean getMobile() {
         return isMobile;
     }
 
-    public void setMobile(boolean mobile) {
+    public void setMobile(Boolean mobile) {
         isMobile = mobile;
     }
 
-    public boolean isCMS() {
+    public Boolean getCMS() {
         return isCMS;
     }
 
-    public void setCMS(boolean CMS) {
+    public void setCMS(Boolean CMS) {
         isCMS = CMS;
     }
+
+    @Column(name = "IsCMS",nullable = true)
+    private Boolean isCMS;
+
 
 
 
