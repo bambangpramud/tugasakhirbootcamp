@@ -1,0 +1,12 @@
+Index: .idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml
+--- a/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml	
++++ b/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml	
+@@ -1,4 +1,4 @@
+-<changelist name="Uncommitted_changes_before_rebase_[Changes]" date="1673691854907" recycled="true" deleted="true">
++<changelist name="Uncommitted_changes_before_rebase_[Changes]" date="1673692127805" recycled="true" deleted="true">
+   <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" />
+   <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
+ </changelist>
+\ No newline at end of file

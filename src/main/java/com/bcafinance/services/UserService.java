@@ -45,6 +45,14 @@ public class UserService {
         {
             throw new ResourceNotFoundException(ConstantMessage.WARNING_PHONE_NUMBER_UNIQ);
         }
+        if (user.getCMS()==null){
+            throw new ResourceNotFoundException(ConstantMessage.WARNING_CMS_REQUIRED);
+        }
+        if (user.getMobile()==null){
+            throw new ResourceNotFoundException(ConstantMessage.WARNING_MOBILE_REQUIRED);
+        }
+        user.setActive(true);
+        user.setActivated(false);
         userRepo.save(user);
     }
 
@@ -80,7 +88,7 @@ public class UserService {
         User user = userRepo.findById(r.getId()).orElseThrow(()->
                 new ResourceNotFoundException(ConstantMessage.WARNING_USER_NOT_FOUND));
 
-        user.setModifiedBy("1");
+        user.setModifiedBy(r.getModifiedBy());
         user.setModifiedDate(new Date());
 
         if(r.getCollectName() != null &&
@@ -88,11 +96,6 @@ public class UserService {
                 !Objects.equals(user.getCollectName(),r.getCollectName()))
 
         {
-//            Optional<Reseller> cBeanOptional = resellerRepo.findByResellerName(r.getResellerName());
-//            if(cBeanOptional.isPresent())//it means if exists
-//            {
-//                throw new ResourceNotFoundException(ConstantMessage.WARNING_RESELLER_NAME_EXIST);
-//            }
             user.setCollectName(r.getCollectName());
         }
 
@@ -150,24 +153,24 @@ public class UserService {
             user.setPassword(r.getPassword());//BERARTI ADA PERUBAHAN DI SINI
         }
 
-        if(!Objects.equals(user.isActive(),r.isActive()))
+        if(!Objects.equals(user.getActive(),r.getActive()) && r.getActive() != null && !r.getActive().equals(""))
         {
-            user.setActive(r.isActive());
+            user.setActive(r.getActive());
         }
 
-        if(!Objects.equals(user.isCMS(),r.isCMS()))
+        if(!Objects.equals(user.getCMS(),r.getCMS()) && r.getCMS() != null && !r.getCMS().equals(""))
         {
-            user.setCMS(r.isCMS());
+            user.setCMS(r.getCMS());
         }
 
-        if(!Objects.equals(user.isMobile(),r.isMobile()))
+        if(!Objects.equals(user.getMobile(),r.getMobile()) && r.getMobile() != null && !r.getMobile().equals(""))
         {
-            user.setMobile(r.isMobile());
+            user.setMobile(r.getMobile());
         }
 
-        if(!Objects.equals(user.isActivated(),r.isActivated()))
+        if(!Objects.equals(user.getActivated(),r.getActivated()) && r.getActivated() != null && !r.getActivated().equals(""))
         {
-            user.setActivated(r.isActivated());
+            user.setActivated(r.getActivated());
         }
 
     }

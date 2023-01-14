@@ -45,7 +45,6 @@ public KunjunganController(KunjunganService kunjunganService){
     @PostMapping("/v1/kunjungan")
     public ResponseEntity<Object>
     saveKunjungan(@RequestBody InputKunjunganDTO inputKunjungan) throws Exception {
-
         if(inputKunjungan==null)throw new ResourceNotFoundException(ConstantMessage.ERROR_NO_CONTENT);
         kunjunganService.addInputKunjungan(inputKunjungan);
         return new ResponseHandler().generateResponse(ConstantMessage.SUCCESS_SAVE, HttpStatus.CREATED,null,null,null);
