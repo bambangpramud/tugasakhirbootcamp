@@ -67,7 +67,7 @@ public class User implements Serializable {
     private String phoneNumber;
 
     @Length(message = ConstantMessage.WARNING_DATA_EMPTY)
-    @Column(name = "Msisdn" , nullable = true, length = 20,unique = true)
+    @Column(name = "Msisdn" , nullable = true, length = 20)
     private String msisdn;
 
     @Length(message = ConstantMessage.WARNING_DATA_EMPTY)

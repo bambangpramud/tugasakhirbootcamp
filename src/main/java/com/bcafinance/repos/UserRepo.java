@@ -27,6 +27,7 @@ public interface UserRepo extends JpaRepository<User,Long> {
     Optional<User> findByUniqId(String uniqId);
     Optional<User> findByMsisdn(String phone);
     Optional<User> findByPhoneNumber(String phone);
+    User getUserById(Long id);
 
     @Query(value = "SELECT * FROM users WHERE IsActive = 'true'",
             nativeQuery = true)
