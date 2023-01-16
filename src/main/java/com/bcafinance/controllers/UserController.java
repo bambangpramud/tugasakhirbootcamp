@@ -49,7 +49,7 @@ public class UserController {
     }
 
 
-    @PostMapping("/user")
+    @PostMapping("v1/user")
     public ResponseEntity<Object>
     saveUser(@Valid @RequestBody User user, @RequestHeader Map<String,String> headers,
                  @RequestParam Map<String,String> params,
@@ -60,7 +60,7 @@ public class UserController {
     }
 
 
-    @PostMapping("/user/login")
+    @PostMapping("v1/user/login")
     public ResponseEntity<Object>
     loginUser(@Valid @RequestBody LoginDTO user, @RequestHeader Map<String,String> headers,
               @RequestParam Map<String,String> params,
@@ -70,7 +70,7 @@ public class UserController {
     }
 
 
-    @GetMapping("/user/all")
+    @GetMapping("v1/user/all")
     public ResponseEntity<Object> findAllUserDTO()throws Exception{
 
         List<User> lsUser = userService.findAllUser();
@@ -85,7 +85,7 @@ public class UserController {
         return new ResponseHandler().
                 generateResponse(ConstantMessage.SUCCESS_FIND_BY,HttpStatus.OK,lsUserDTO,null,null);
     }
-    @GetMapping("/user/{id}")
+    @GetMapping("v1/user/{id}")
     public ResponseEntity<Object> findUserById(@PathVariable("id") Long id)throws Exception{
 
         User user = userService.findUserById(id);
@@ -102,7 +102,7 @@ public class UserController {
         }
 
     }
-    @PutMapping("/user/update")
+    @PutMapping("v1/user/update")
     public ResponseEntity<Object> updateUserByID(@RequestBody User user)throws Exception{
         userService.updateUserByID(user);
         return new ResponseHandler().

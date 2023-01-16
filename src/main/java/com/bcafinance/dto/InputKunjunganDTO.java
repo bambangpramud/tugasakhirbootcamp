@@ -29,6 +29,16 @@ public class InputKunjunganDTO {
 
     private String statusUnit;
 
+    public String getGps() {
+        return gps;
+    }
+
+    public void setGps(String gps) {
+        this.gps = gps;
+    }
+
+    private String gps;
+
     private String statusAlamat;
 
     private String bertemuDengan;

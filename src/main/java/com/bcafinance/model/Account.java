@@ -35,7 +35,7 @@ public class Account {
     private String accountNumber;
 
     @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
-    @Column(name = "Name",length = 50 ,unique = true)
+    @Column(name = "Name",length = 50)
     private String name;
 
     @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)

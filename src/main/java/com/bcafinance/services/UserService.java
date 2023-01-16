@@ -112,7 +112,7 @@ public class UserService {
                 r.getPhoneNumber().length()>0 &&
                 !Objects.equals(user.getPhoneNumber(),r.getPhoneNumber())){
 
-            FormatValidation.phoneNumberFormatValidation(user.getPhoneNumber());
+//            FormatValidation.phoneNumberFormatValidation(user.getPhoneNumber());
             user.setPhoneNumber(r.getPhoneNumber());
         }
 

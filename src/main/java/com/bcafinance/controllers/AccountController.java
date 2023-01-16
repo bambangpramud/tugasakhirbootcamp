@@ -85,6 +85,24 @@ public class AccountController {
 
     }
 
+    @GetMapping("/v1/account/for/user/delivered")
+    public ResponseEntity<Object> getAccountForUserDelivered(@RequestParam String coveran
+
+    )throws Exception {
+
+
+
+
+        Iterable<Account> account =   accountService.getAccountForUserDelivered(coveran);
+
+        List<OrderAccountDTO> lsAccountDTO = modelMapper.map(account,new TypeToken<List<OrderAccountDTO>>() {}.getType());
+//
+
+        return new ResponseHandler().
+                generateResponse(ConstantMessage.SUCCESS_FIND_BY, HttpStatus.OK,lsAccountDTO,null,null);
+
+    }
+
     @GetMapping("/v1/account/for/report")
     public ResponseEntity<Object> getAccountForReport(@RequestParam String coveran
                                                       ,@RequestParam String agingdate

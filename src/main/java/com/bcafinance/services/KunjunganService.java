@@ -56,6 +56,10 @@ public void addKunjungan(Kunjungan kunjungan) throws Exception{
     kunrepo.save(kunjungan);
 }
 
+public  Kunjungan kunjunganById(Long id)  throws Exception{
+    return kunrepo.findById(id).orElseThrow(()->
+            new ResourceNotFoundException(ConstantMessage.WARNING_NOT_FOUND));
+}
 public void addInputKunjungan(InputKunjunganDTO inputKunjungan) throws Exception{
 
        Kunjungan kunjungan = new Kunjungan();
@@ -78,6 +82,7 @@ public void addInputKunjungan(InputKunjunganDTO inputKunjungan) throws Exception
     kunjungan.setPostalCode(inputKunjungan.getPostalCode());
     kunjungan.setAgingDate(LocalDate.parse(inputKunjungan.getAgingDate()));
     kunjungan.setRemark(inputKunjungan.getRemark());
+    kunjungan.setGps(inputKunjungan.getGps());
     kunjungan.setUser(user);
     kunjungan.setAccount(account);
     kunjungan.setCreatedBy(inputKunjungan.getCreatedBy());
@@ -176,6 +181,10 @@ Kunjungan kunjungan = kunrepo.findById(kunjunganParam.getId()).orElseThrow(()->
         kunjungan.setUser(kunjunganParam.getUser());
 
 }
+
+
+
+
 
 //    public void refreshAddKunjungan(List<Account> lsAccount //account by coveran
 //                                     , List<User>  // user by coveran

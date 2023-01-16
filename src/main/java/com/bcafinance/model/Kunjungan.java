@@ -92,6 +92,19 @@ public class Kunjungan {
     @Column(name = "Remark",length = 225)
     private String remark;
 
+    public String getGps() {
+        return gps;
+    }
+
+    public void setGps(String gps) {
+        this.gps = gps;
+    }
+
+    //
+//    @NotEmpty(message = ConstantMessage.WARNING_DATA_EMPTY)
+    @Column(name = "GPS",length = 225)
+    private String gps;
+
 
 
     @ManyToOne
