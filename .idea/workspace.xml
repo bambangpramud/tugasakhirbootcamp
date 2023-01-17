@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6de7e6f-4d75-4ecc-9dc9-e8fbc5b0d3f7" name="Changes" comment="uhuy">
+    <list default="true" id="d6de7e6f-4d75-4ecc-9dc9-e8fbc5b0d3f7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/dto/UserDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/repos/AccountRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/repos/AccountRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/services/AccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/swagger/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/swagger/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcafinance/utils/ConstantMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcafinance/utils/ConstantMessage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673607079563</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updateddd">
+      <created>1673929845376</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673929845376</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,25 +188,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="uhuy" />
     <MESSAGE value="updated setelah merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated setelah merge" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bcafinance/services/AccountService.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bcafinance/services/AccountService.java</url>
-          <line>43</line>
-          <properties class="com.bcafinance.services.AccountService" method="saveBulkAccount">
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="updateddd" />
+    <option name="LAST_COMMIT_MESSAGE" value="updateddd" />
   </component>
 </project>

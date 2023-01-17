@@ -10,12 +10,10 @@ Version 1.0
 
 package com.bcafinance.services;
 
-import com.bcafinance.dto.CountDTO;
 import com.bcafinance.model.Account;
 import com.bcafinance.repos.AccountRepo;
 import com.bcafinance.utils.CsvReader;
 
-import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,8 +23,6 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
-import java.util.logging.Logger;
 
 @Service
 @Transactional
@@ -71,8 +67,11 @@ public AccountService(AccountRepo accrepo){
         return accrepo.getAccountByAccountNumber(coveran);
     }
 
-    public String getOrderCount(String coveran){
+    public long getOrderCount(String coveran){
         return accrepo.getOrderCount(coveran);
+    }
+    public long getSendCount(String coveran){
+        return accrepo.getSendCount(coveran);
     }
 
     public void updateInputKunjungan(Account accountParam){

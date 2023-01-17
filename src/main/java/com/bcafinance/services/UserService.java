@@ -79,8 +79,9 @@ public class UserService {
         UserDTO userDTO = modelMapper.map(user,UserDTO.class);
         if(user != null){
             if (user.getPassword().equals(credential.getPassword())){
-//                userDTO.setOrderCount(accountService.getOrderCount(user.getCoveran()));
-                return user;
+                userDTO.setOrderCount(accountService.getOrderCount(user.getCoveran()));
+                userDTO.setSendCount(accountService.getSendCount(user.getCoveran()));
+                return userDTO;
             }
             else{
                 throw  new ResourceNotFoundException(ConstantMessage.WARNING_LOGIN_FAIL);

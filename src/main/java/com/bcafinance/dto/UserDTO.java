@@ -20,25 +20,25 @@ public class UserDTO {
     private Long id;
 
 
-    public String getOrderCount() {
+    public long getOrderCount() {
         return orderCount;
     }
 
-    public void setOrderCount(String orderCount) {
+    public void setOrderCount(long orderCount) {
         this.orderCount = orderCount;
     }
 
-    public String getSendCount() {
+    public long getSendCount() {
         return sendCount;
     }
 
-    public void setSendCount(String sendCount) {
+    public void setSendCount(long sendCount) {
         this.sendCount = sendCount;
     }
 
-    private String orderCount;
+    private long orderCount;
 
-    private String sendCount;
+    private long sendCount;
     @Length(message = ConstantMessage.WARNING_REQUIRED)
     @NotEmpty(message = ConstantMessage.WARNING_LENGHT)
     private String uniqId;
