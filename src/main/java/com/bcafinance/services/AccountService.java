@@ -10,6 +10,7 @@ Version 1.0
 
 package com.bcafinance.services;
 
+import com.bcafinance.dto.CountDTO;
 import com.bcafinance.model.Account;
 import com.bcafinance.repos.AccountRepo;
 import com.bcafinance.utils.CsvReader;
@@ -68,6 +69,10 @@ public AccountService(AccountRepo accrepo){
     }
     public Account getAccountDetailForUser(String coveran){
         return accrepo.getAccountByAccountNumber(coveran);
+    }
+
+    public String getOrderCount(String coveran){
+        return accrepo.getOrderCount(coveran);
     }
 
     public void updateInputKunjungan(Account accountParam){

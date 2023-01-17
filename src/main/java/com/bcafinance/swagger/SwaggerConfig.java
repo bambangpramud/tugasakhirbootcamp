@@ -20,7 +20,7 @@ public class SwaggerConfig {
     public Docket api(){
         return new Docket(DocumentationType.SWAGGER_2).
                 select().
-                apis(RequestHandlerSelectors.basePackage("com.bcafinance.ahsspringboot.controllers")).
+                apis(RequestHandlerSelectors.basePackage("com.bcafinance.controllers")).
                 paths(PathSelectors.any()).build()
                 .apiInfo(apiInfo());
     }
@@ -35,8 +35,8 @@ public class SwaggerConfig {
     private ApiInfo apiInfo()
     {
         ApiInfo apiInfo = new ApiInfo(
-                "ArchanSpringBootRestAPI",//title
-                "Springboot bootcamp BCAF BATCH 1 Archan",//descriptions
+                "SpringBootRestAPI",//title
+                "Springboot bootcamp BCAF BATCH 1",//descriptions
                 "v1.0",//version
                 "Term Of Services URL is On Progress",//termsOfServiceUrl
                 new Contact("Archan Habib S","localhost:8080/api","archanhabib11@@gmail.com"),//Contact Name

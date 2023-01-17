@@ -1,7 +1,12 @@
 package com.bcafinance.repos;
 
+import com.bcafinance.dto.CountDTO;
 import com.bcafinance.model.Account;
+import com.bcafinance.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import javax.validation.constraints.NotEmpty;
@@ -29,5 +34,8 @@ public interface AccountRepo extends JpaRepository<Account,Long> {
     Optional<Account> findAccountByAccountNumber(String accountNumber);
 
 
+    @Query(value = "SELECT COUNT(0) as jumlah FROM Account WHERE StatusKunjungan = 'pending' AND Coveran = 'bekasi'",
+            nativeQuery = true)
+    String getOrderCount(@Param("coveran") String coveran);
 
 }

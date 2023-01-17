@@ -9,6 +9,7 @@ Version 1.0
 */
 
 import com.bcafinance.utils.ConstantMessage;
+import io.swagger.models.auth.In;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.Column;
@@ -17,6 +18,27 @@ import javax.validation.constraints.NotEmpty;
 public class UserDTO {
 
     private Long id;
+
+
+    public String getOrderCount() {
+        return orderCount;
+    }
+
+    public void setOrderCount(String orderCount) {
+        this.orderCount = orderCount;
+    }
+
+    public String getSendCount() {
+        return sendCount;
+    }
+
+    public void setSendCount(String sendCount) {
+        this.sendCount = sendCount;
+    }
+
+    private String orderCount;
+
+    private String sendCount;
     @Length(message = ConstantMessage.WARNING_REQUIRED)
     @NotEmpty(message = ConstantMessage.WARNING_LENGHT)
     private String uniqId;

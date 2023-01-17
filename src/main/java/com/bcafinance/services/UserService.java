@@ -8,12 +8,15 @@ Created on 11/01/2023
 Version 1.0
 */
 import com.bcafinance.dto.LoginDTO;
+import com.bcafinance.dto.UserDTO;
 import com.bcafinance.handler.FormatValidation;
 import com.bcafinance.handler.ResourceNotFoundException;
 import com.bcafinance.model.User;
 import com.bcafinance.repos.KunjunganRepo;
 import com.bcafinance.repos.UserRepo;
 import com.bcafinance.utils.ConstantMessage;
+
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,10 +31,21 @@ import java.util.Optional;
 public class UserService {
     private UserRepo userRepo;
 
+    private AccountService accountService;
+
+
     @Autowired
-    public UserService(UserRepo userRepo){
+    private ModelMapper modelMapper;
+
+
+    @Autowired
+    public UserService(UserRepo userRepo,AccountService accountService){
+
         this.userRepo=userRepo;
+        this.accountService=accountService;
     }
+
+
 
     public void saveUser(User user) throws Exception{
 
@@ -51,16 +65,21 @@ public class UserService {
         if (user.getMobile()==null){
             throw new ResourceNotFoundException(ConstantMessage.WARNING_MOBILE_REQUIRED);
         }
+
+        FormatValidation.phoneNumberFormatValidation(user.getPhoneNumber());
         user.setActive(true);
         user.setActivated(false);
         userRepo.save(user);
     }
 
     public Object loginUser(LoginDTO credential) throws Exception{
+
         User user = userRepo.findByUniqId(credential.getUniqId()).orElseThrow(()->
                 new ResourceNotFoundException(ConstantMessage.WARNING_LOGIN_FAIL));
+        UserDTO userDTO = modelMapper.map(user,UserDTO.class);
         if(user != null){
             if (user.getPassword().equals(credential.getPassword())){
+//                userDTO.setOrderCount(accountService.getOrderCount(user.getCoveran()));
                 return user;
             }
             else{
@@ -91,6 +110,16 @@ public class UserService {
         user.setModifiedBy(r.getModifiedBy());
         user.setModifiedDate(new Date());
 
+        Optional<User> cBeanOptional = userRepo.findByUniqId(r.getUniqId());
+        if(r.getUniqId() != null && !r.getUniqId().equals("")&&
+                !Objects.equals(user.getUniqId(),r.getUniqId()) )
+        {
+            if (cBeanOptional.isPresent()){
+                throw new ResourceNotFoundException(ConstantMessage.WARNING_UNIQ_ID_UNIQ);
+            }
+            user.setUniqId(r.getUniqId());
+        }
+
         if(r.getCollectName() != null &&
                 r.getCollectName().length()>0 &&
                 !Objects.equals(user.getCollectName(),r.getCollectName()))
@@ -112,7 +141,7 @@ public class UserService {
                 r.getPhoneNumber().length()>0 &&
                 !Objects.equals(user.getPhoneNumber(),r.getPhoneNumber())){
 
-//            FormatValidation.phoneNumberFormatValidation(user.getPhoneNumber());
+            FormatValidation.phoneNumberFormatValidation(r.getPhoneNumber());
             user.setPhoneNumber(r.getPhoneNumber());
         }
 

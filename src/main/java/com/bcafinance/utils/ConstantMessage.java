@@ -35,7 +35,7 @@ public class ConstantMessage {
     public final static String ERROR_INTERNAL_SERVER = "INTERNAL SERVER ERROR";
     public final static String ERROR_MAIL_FORM_JSON = "Malformed JSON request";
     public final static String ERROR_EMAIL_FORMAT_INVALID = "FORMAT EMAIL TIDAK SESUAI (Nomor/Karakter@Nomor/Karakter)";
-    public final static String ERROR_PHONE_NUMBER_FORMAT_INVALID = "FORMAT NOMOR HANDPHONE TIDAK SESUAI (+628XX-)";
+    public final static String ERROR_PHONE_NUMBER_FORMAT_INVALID = "FORMAT NOMOR HANDPHONE TIDAK SESUAI (085XX-)";
     public final static String ERROR_DATE_FORMAT_YYYYMMDD = "FORMAT TANGGAL TIDAK SESUAI (YYYY-mm-dd)";
 
     public final static String ERROR_UNEXPECTED = "UNEXPECTED ERROR";
